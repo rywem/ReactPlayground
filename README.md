@@ -23,6 +23,7 @@ A space for learning and experimenting with React.
 - `dotnet tool install --global dotnet-ef`
 - `dotnet ef migrations add InitialCreate -p Persistence/ -s API/`
 - `dotnet ef migrations remove -p Persistence/ -s API/`  Remove last migration
+- `dotnet watch run`  (needs to cd ./API)
 ## VS Code Extensions
 - Auto Close Tag
 - Auto Rename Tag
