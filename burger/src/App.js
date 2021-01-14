@@ -1,8 +1,61 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
 
+class App extends Component {
+  state = {
+    persons: [
+      { name: "Max", age: 28 },
+      { name: "Mike", age: 34 },
+      { name: "Jane", age: 30 }
+    ]
+  }
+
+  switchNameHandler = (naame) =>{
+    this.setState({
+      persons: [
+        { name: naame, age: 28 },
+        { name: "Mike", age: 34 },
+        { name: "Jane", age: 30 }
+      ]
+    })
+  }
+
+  nameChangedHandler = (event) => {
+    this.setState({
+      persons: [
+        { name: 'Max', age: 28 },
+        { name: event.target.value, age: 34 },
+        { name: "Jane", age: 25 }
+      ]
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <h1>Hi, I'm React App</h1>
+      <p>This is really working!</p>
+      <button onClick={() => this.switchNameHandler("MAX!!")}>Switch Name</button>
+      <Person 
+        name={this.state.persons[0].name} 
+        age={this.state.persons[0].age} />
+      <Person 
+        name={this.state.persons[1].name} 
+        age={this.state.persons[1].age} 
+        click={this.switchNameHandler.bind(this, 'Max!')}
+        changed={this.nameChangedHandler}
+        >My Hobbies: Racing</Person>
+      <Person 
+        name={this.state.persons[2].name} 
+        age={this.state.persons[2].age} />
+    </div>
+    );
+  }
+}
+
+/*
 //class App extends Component {
 const app = props => {
   const [ personsState, setPersonsState ] = useState({
@@ -23,10 +76,10 @@ const app = props => {
       { name: "Jane", age: 25 }
     ]});
   } 
-
+*/
   
   /*
-  const nameChangedHandler = (event) => {
+  nameChangedHandler = (event) => {
     this.setState({
       persons: [
         { name: 'Max', age: 28 },
@@ -35,6 +88,7 @@ const app = props => {
       ]
     })
   }*/
+  /*
   const nameChangedHandler = (event) => {
     setPersonsState({
       persons: [
@@ -66,11 +120,11 @@ const app = props => {
     </div>
   );
 }
+*/
 
 
 
-
-export default app;
+export default App;
 
 /*
 state = {
