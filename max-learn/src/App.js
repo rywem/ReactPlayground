@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
-
+import Radium from 'radium';
 class App extends Component {
   state = {
     persons: [
@@ -48,7 +48,11 @@ class App extends Component {
       color: 'white',
       font: 'inherit',
       border: '1px solid blue',
-      padding: '8px'
+      padding: '8px',
+      ':hover': {
+        backgroundColor: 'lightgreen',
+        color: 'black'
+      }
     };
 
     let persons = null;
@@ -69,7 +73,12 @@ class App extends Component {
           })}          
         </div>       
       );
+      
       style.backgroundColor = 'red';
+      style[':hover'] = {
+        backgroundColor: 'salmon',
+        color: 'black'
+      }
     }
 
     const classes = [];
@@ -95,4 +104,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Radium(App);
