@@ -6,6 +6,7 @@ A space for learning and experimenting with React.
 `create-react-app projectName`
 `npm start` - cd into react app directory
 `npm install --save radium`
+`npm install --save styled-components`
 ## Extensions 
 - Simple React Snippets
 - Prettier
