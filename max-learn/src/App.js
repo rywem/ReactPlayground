@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
 import classes from './App.css';
-
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 class App extends Component {
   state = {
     persons: [
@@ -23,13 +23,11 @@ class App extends Component {
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.find(p => {
-      return p.id === id;
+      return p.id === id;      
     });
 
     const person = personIndex;
- 
     person.name = event.target.value;
-
     const persons = [...this.state.persons];
     persons[personIndex] = person;
 
@@ -51,13 +49,14 @@ class App extends Component {
         <div>
           { this.state.persons.map((person, index) => {
             return (
-              <Person 
-                click={() => this.deletePersonHandler(index)}
-                name={person.name} 
-                age={person.age}
-                key={person.id}
-                changed={(event) => this.nameChangedHandler(event, person.id)}
-                 />
+              <ErrorBoundary key={person.id}>
+                <Person 
+                  click={() => this.deletePersonHandler(index)}
+                  name={person.name} 
+                  age={person.age}
+                  changed={(event) => this.nameChangedHandler(event, person.id)}
+                  />
+              </ErrorBoundary>
             )
           })}          
         </div>       
