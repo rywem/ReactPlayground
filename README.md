@@ -44,6 +44,7 @@ A space for learning and experimenting with React.
 - `npm install --save radium`
 - `npm install --save styled-components`
 - `npm run eject`
+- `npx create-react-app client-app --use-npm --template typescript` use typescript
 
 ## Extensions 
 - Simple React Snippets
