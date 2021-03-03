@@ -24,7 +24,7 @@ A space for learning and experimenting with React.
 - `dotnet ef migrations add InitialCreate -p Persistence/ -s API/`
 - `dotnet ef migrations remove -p Persistence/ -s API/`  Remove last migration
 - `dotnet watch run`  (needs to cd ./API)
-
+https://github.com/TryCatchLearn/Reactivities
 ## VS Code Extensions
 - Auto Close Tag
 - Auto Rename Tag
@@ -45,7 +45,7 @@ A space for learning and experimenting with React.
 - `npm install --save styled-components`
 - `npm run eject`
 - `npx create-react-app client-app --use-npm --template typescript` use typescript
-
+- `npm install axios` rest client
 ## Extensions 
 - Simple React Snippets
 - Prettier
