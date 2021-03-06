@@ -46,6 +46,7 @@ https://github.com/TryCatchLearn/Reactivities
 - `npm run eject`
 - `npx create-react-app client-app --use-npm --template typescript` use typescript
 - `npm install axios` rest client
+- `npm install semantic-ui-react semantic-ui-css` styling framework
 ## Extensions 
 - Simple React Snippets
 - Prettier
