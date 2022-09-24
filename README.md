@@ -24,6 +24,7 @@ A space for learning and experimenting with React.
 - `dotnet ef migrations add InitialCreate -p Persistence/ -s API/`
 - `dotnet ef migrations remove -p Persistence/ -s API/`  Remove last migration
 - `dotnet watch run`  (needs to cd ./API)
+- `dotnet ef database update`
 https://github.com/TryCatchLearn/Reactivities
 ## VS Code Extensions
 - Auto Close Tag
@@ -50,3 +51,6 @@ https://github.com/TryCatchLearn/Reactivities
 ## Extensions 
 - Simple React Snippets
 - Prettier
+
+### Repository Contents:
+- AuthenticationTutorial, [src](https://blog.logrocket.com/complete-guide-authentication-with-react-router-v6/)
